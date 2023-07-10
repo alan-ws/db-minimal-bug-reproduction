@@ -1,14 +1,15 @@
 {
   "private": true,
   "scripts": {
+    "link": "dotenv -- turbo run link",
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "deploy:pr": "turbo run deploy:pr",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "vc:build": "turbo run vc:build",
+    "vc:deploy": "dotenv -- turbo run vc:deploy"
   },
   "devDependencies": {
     "@turbo/gen": "^1.10.7",
+    "dotenv-cli": "^7.2.1",
     "eslint": "^8.44.0",
     "eslint-config-custom": "workspace:*",
     "prettier": "^3.0.0",

@@ -3,19 +3,18 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "link": "vercel link --token $VERCEL_API_TOKEN --project 'turborepo-web-cli' --yes",
     "dev": "next dev",
-    "build": "vercel build",
-    "vercel-build": "next build",
+    "build": "next build",
     "start": "next start",
-    "deploy:pr": "vercel deploy --prebuilt --yes --regions fra1 --token=$VERCEL_API_TOKEN",
-    "lint": "next lint"
+    "vc:build": "vercel build --yes",
+    "vc:deploy": "vercel deploy --no-wait --token $VERCEL_API_TOKEN"
   },
   "dependencies": {
     "next": "^13.4.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "ui": "workspace:*",
-    "vercel": "^31.0.1"
+    "ui": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^20.4.1",
