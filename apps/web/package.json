@@ -5,10 +5,10 @@
   "scripts": {
     "link": "vercel link --token $VERCEL_API_TOKEN --project 'turborepo-web-cli' --yes",
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build --debug",
     "start": "next start",
-    "vc:build": "vercel build --yes",
-    "vc:deploy": "vercel deploy --no-wait --token $VERCEL_API_TOKEN"
+    "vc:build": "vercel build -d --yes",
+    "vc:deploy": "vercel deploy --prebuilt --no-wait --token $VERCEL_API_TOKEN"
   },
   "dependencies": {
     "next": "^13.4.9",

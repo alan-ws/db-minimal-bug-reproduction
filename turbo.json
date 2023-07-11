@@ -10,10 +10,12 @@
       "outputs": [".next/**", "!.next/cache/**"]
     },
     "vc:build": {
-      "dependsOn": ["^build"]
+      "inputs": [".next/**", "!.next/cache/**"],
+      "cache": false
     },
     "vc:deploy": {
-      "dependsOn": ["^vc:build"]
+      "dependsOn": ["^vc:deploy"],
+      "cache": false
     },
     "lint": {},
     "dev": {
